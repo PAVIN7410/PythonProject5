@@ -38,33 +38,37 @@ def get_english_words():
 # Создаём функцию, которая будет делать саму игру
 def word_game():
     print("Добро пожаловать в игру")
-    while True:
-        # Создаём функцию, чтобы использовать результат функции-словаря
-        word_dict = get_english_words()
+    try:
+        while True:
+            # Создаём функцию, чтобы использовать результат функции-словаря
+            word_dict = get_english_words()
 
-        if word_dict is None:  # Проверяем, что словарь не None
-            print("Не удалось получить информацию о слове. Попробуйте еще раз.")
-            continue
+            if word_dict is None:  # Проверяем, что словарь не None
+                print("Не удалось получить информацию о слове. Попробуйте еще раз.")
+                continue
 
-        word = word_dict.get("english_words")  # Берем оригинальное английское слово для проверки ответа пользователя
-        translated_word = word_dict.get("translated_word")  # Берем переведённое слово для вывода
-        word_definition = word_dict.get("word_definition")  # Берем переведённое определение для вывода
+            word = word_dict.get("english_words")  # Берем оригинальное английское слово для проверки ответа пользователя
+            translated_word = word_dict.get("translated_word")  # Берем переведённое слово для вывода
+            word_definition = word_dict.get("word_definition")  # Берем переведённое определение для вывода
 
-        # Начинаем игру
-        print(f"Значение слова - {word_definition}")
-        user = input("Что это за слово? ")
+            # Начинаем игру
+            print(f"Значение слова - {word_definition}")
+            user = input("Что это за слово? ")
 
-        if user.lower() == translated_word.lower(): # Сравниваем ввод пользователя с переведённым словом
+            if user.lower() == translated_word.lower(): # Сравниваем ввод пользователя с переведённым словом
 
-            print("Все верно!")
-        else:
-            print(f"Ответ неверный, было загадано это слово - {translated_word} ({word})")
+                print("Все верно!")
+            else:
+                print(f"Ответ неверный, было загадано это слово - {translated_word} ({word})")
 
-        # Создаём возможность закончить игру
-        play_again = input("Хотите сыграть еще раз? да/нет")
-        if play_again != "да":
-            print("Спасибо за игру!")
-            break
+            # Создаём возможность закончить игру
+            play_again = input("Хотите сыграть еще раз? да/нет")
+            if play_again != "да":
+                print("Спасибо за игру!")
+                break
+
+    except KeyboardInterrupt:
+        print("\nИгра прервана пользователем.")
 
 
 word_game()

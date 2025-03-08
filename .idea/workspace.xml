@@ -264,7 +264,23 @@
       <option name="project" value="LOCAL" />
       <updated>1741452004415</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="h_w3">
+      <option name="closed" value="true" />
+      <created>1741463288933</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1741463288933</updated>
+    </task>
+    <task id="LOCAL-00009" summary="h_w_ps03">
+      <option name="closed" value="true" />
+      <created>1741463337182</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1741463337182</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -281,6 +297,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="h_w2" />
     <MESSAGE value="h_w3" />
-    <option name="LAST_COMMIT_MESSAGE" value="h_w3" />
+    <MESSAGE value="h_w_ps03" />
+    <option name="LAST_COMMIT_MESSAGE" value="h_w_ps03" />
   </component>
 </project>
